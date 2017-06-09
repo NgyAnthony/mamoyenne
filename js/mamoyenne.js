@@ -9,15 +9,8 @@ var moyenne = {
         this.noteDen = noteDen;
         this.noteCoef = noteCoef;
     },
-    calcul : function () {
-        for (var i = 0, j = moyenneList.length; i < j; i++) {
-            var calcul = ((parseFloat(this.moyenneList.noteNum[i]) * parseFloat(this.moyenneList.noteCoef[i])) / (parseFloat(this.moyenneList.noteDen[i]) * parseFloat(this.moyenneList.noteCoef[i])));
-            var somme = calcul * 20;
-            return somme;
-        }
-    },
     decrire : function () {
-        var decrire = console.log(moyenne.calcul());
+        var decrire = console.log(calcul());
     },
     ajout : function () {
         var ajoutNoteNum = prompt("Rentrez votre note...");
@@ -37,6 +30,15 @@ var moyenne = {
         console.log("0 : Quitter");
     }
 };
+
+function calcul() {
+    for (var i = 0, j = moyenneList.length; i < j; i++) {
+        var calcul = ((parseFloat(this.moyenneList[i].noteNum) * parseFloat(this.moyenneList[i].noteCoef)) / (parseFloat(this.moyenneList[i].noteDen) * parseFloat(this.moyenneList[i].noteCoef)));
+        var somme = calcul * 20;
+        return somme;
+    }
+}
+
 
 //Menu
 moyenne.menu();
