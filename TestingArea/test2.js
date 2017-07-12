@@ -1,5 +1,9 @@
 /**
- * Created by Anthony on 07/06/2017.
+ * Created by Anthony on 10/07/2017.
+ */
+
+/**
+ * Created by Anthony on 28/06/2017.
  */
 /* -----CALCUL---- */
 /*
@@ -41,13 +45,47 @@
  var result = avg * 20;
 
  console.log(result);
-*/
- //Ajout boutton/Clone
+ */
+
+
+
+
+// Compteur
+
 
 function add(){
-    var itm = document.getElementById("form");
-    var cln = itm.cloneNode(true);
-    document.getElementById("wrapper").appendChild(cln)
+    var div = document.getElementById('form');
+    var num = document.createElement("INPUT");
+    num.setAttribute("type", "number");
+    num.setAttribute("placeholder", "Numerateur");
+    num.setAttribute("name", "numerateur");
+    div.appendChild(num);
+
+    var den = document.createElement("INPUT");
+    den.setAttribute("type", "number");
+    den.setAttribute("placeholder", "Denominateur");
+    den.setAttribute("name", "denominateur");
+    div.appendChild(den);
+
+    var coef = document.createElement("INPUT");
+    coef.setAttribute("type", "number");
+    coef.setAttribute("placeholder", "Coefficient");
+    coef.setAttribute("name", "coefficient");
+    div.appendChild(coef);
 }
 
+//Init
+var moyenne = {
+    init: function(numerateur,denominateur,coefficient){
+        this.numerateur = numerateur;
+        this.denominateur = denominateur;
+        this.coefficient = coefficient;
+    }
+};
 
+
+/*
+
+/*
+
+ */

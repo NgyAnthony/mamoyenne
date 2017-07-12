@@ -41,13 +41,11 @@
  var result = avg * 20;
 
  console.log(result);
-*/
- //Ajout boutton/Clone
+ */
+//Ajout boutton/Clone
 
 function add(){
     var itm = document.getElementById("form");
     var cln = itm.cloneNode(true);
     document.getElementById("wrapper").appendChild(cln)
 }
-
-
