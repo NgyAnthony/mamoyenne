@@ -13,7 +13,11 @@ var total = 0;
 
 
 function calcul() {
-
+if(moyenneNum.length == 0 || moyenneCoef.length == 0 || moyenneDen.length == 0){
+    var result0 = (moyenneNum[0] / moyenneDen[0]) * 20
+    console.log(result0)
+}
+else{
     //Push des valeurs brutes en valeurs net
     for(var a=0; a<moyenneNum.length && a<moyenneDen.length ; a++){
         moyenneList.push(moyenneNum[a]/moyenneDen[a]);
@@ -32,6 +36,7 @@ function calcul() {
     var avg = total / sommeCoef;
     var result = avg * 20;
     console.log(result);
+    }
 }
 
 
@@ -84,15 +89,3 @@ function push(){
             moyenneCoef.push(coef[a].value);
         }
     }
-
-
-    /* Problème : quand je push num.value dans l'array moyenneNum par exemple la table va afficher "undefined" pour je ne sais
-    quelle raison, la solution serait de faire un push de num[x].value. le soucis de surplus de valeurs serait de faire un
-    reset des tableaux a chaque fois que le bouton calcul est pressé
-
-     */
-}
-
-
-
-/* La fonction pushCalcul() push les variables JS de la fonction add() qui créent les inputs HTML dans les tableaux qui sont dans la fonciton calcul() */
